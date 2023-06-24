@@ -136,7 +136,7 @@ CREATE TABLE favoritos (
                 cpf NUMERIC(38) NOT NULL,
                 CONSTRAINT favoritos_pk PRIMARY KEY (id_funcionario_favoritando)
 );
-COMMENT ON COLUMN favoritos.id_funcionario_favoritando IS 'Coluna com dados acerca do id do funcionario que est· favoritando outro funcionario.';
+COMMENT ON COLUMN favoritos.id_funcionario_favoritando IS 'Coluna com dados acerca do id do funcionario que est√° favoritando outro funcionario.';
 COMMENT ON COLUMN favoritos.id_funcionario_favorito IS 'Coluna com dados acerca do id do funcionario favorito selecionado.';
 COMMENT ON COLUMN favoritos.cpf IS 'Coluna com dados acerca do cpf dos colaboradores.';
 
@@ -258,16 +258,12 @@ FOREIGN KEY (cpf)
 REFERENCES colaboradores (cpf)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
-NOT†DEFERRABLE;
+NOT DEFERRABLE;
 
 ALTER TABLE emails_colaboradores
 ADD CONSTRAINT chk_tipo_email
-CHECK (tipo_email IN ('empresarial', 'pessoal',†'secund·rio'));
-
-ALTER TABLE habilidades
-ADD CONSTRAINT chk_tipo_habilidade
-CHECK (tipo IN ('hard skill',†'soft†skill'));
+CHECK (tipo_email IN ('empresarial', 'pessoal', 'secundario'));
 
 ALTER TABLE telefones
 ADD CONSTRAINT chk_tipo_telefone
-CHECK (tipo_telefone IN ('empresarial', 'pessoal',†'secundario'));
+CHECK (tipo_telefone IN ('empresarial', 'pessoal', 'secundario'));
