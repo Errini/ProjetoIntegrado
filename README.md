@@ -14,3 +14,4 @@ Os integrantes do grupo são:
     - Gabriel Bruno
     - Kauan Modolo
     - Arthur Rocha
+    - Isllan Toso
